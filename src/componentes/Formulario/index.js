@@ -10,23 +10,14 @@ const Formulario = (props) => {
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
 
-  const times = [
-    "Front-End",
-    "Back-End",
-    "Full-Stack",
-    "DevOps",
-    "Designer & UX",
-    "Mobile",
-  ];
-
   const aoSalvar = (evento) => {
     evento.preventDefault();
     props.aoColaboradorCadastrado({
       nome,
       cargo,
       imagem,
-      time
-    })
+      time,
+    });
   };
 
   return (
@@ -58,7 +49,7 @@ const Formulario = (props) => {
           value={time}
           obrigatorio={true}
           label="Time"
-          itens={times}
+          itens={props.times}
         />
         <Botao>Criar Card</Botao>
       </form>
