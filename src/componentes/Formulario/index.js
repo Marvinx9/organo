@@ -18,6 +18,10 @@ const Formulario = (props) => {
       imagem,
       time,
     });
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
   };
 
   return (
@@ -27,7 +31,7 @@ const Formulario = (props) => {
         <CampoTexto
           obrigatorio={true}
           label="Nome"
-          value={nome}
+          valor={nome}
           aoAlterar={(valor) => setNome(valor)}
           placeholder="Digite seu nome"
         />

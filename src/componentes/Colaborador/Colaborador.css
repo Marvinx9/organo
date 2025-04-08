@@ -1,0 +1,10 @@
+.colaborador {
+    background: linear-gradient(to right, red 50%, blue 50%);
+}
+
+.cabecalho img {
+  border-radius: 50%;
+  width: 50%;
+}
+
+.rodape {}
