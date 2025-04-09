@@ -6,8 +6,8 @@ import Rodape from "./componentes/Rodape";
 
 function App() {
   const times = [
-    { nome: "Front-End", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
-    { nome: "Back-End", corPrimaria: "#82CFFA", corSecundaria: "#E8F8FF" },
+    { nome: "Front-End", corPrimaria: "#82CFFA", corSecundaria: "#D9F7E9" },
+    { nome: "Back-End", corPrimaria: "#57C278", corSecundaria: "#E8F8FF" },
     { nome: "Full-Stack", corPrimaria: "#A6D157", corSecundaria: "#F0F8E2" },
     { nome: "DevOps", corPrimaria: "#E06B69", corSecundaria: "#FDE7E8" },
     { nome: "Designer & UX", corPrimaria: "#DB6EBF", corSecundaria: "#FAE9F5" },

@@ -12,6 +12,7 @@ const Formulario = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
+
     props.aoColaboradorCadastrado({
       nome,
       cargo,
@@ -51,7 +52,7 @@ const Formulario = (props) => {
         <ListaSuspensa
           aoAlterar={(valor) => setTime(valor)}
           value={time}
-          obrigatorio={true}
+          required={true}
           label="Time"
           itens={props.times}
         />

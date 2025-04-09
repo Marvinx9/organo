@@ -2,7 +2,6 @@ import Colaborador from "../Colaborador";
 import "./Time.css";
 
 const Time = (props) => {
-  console.log(props.colaboradores);
 
   return (
     props.colaboradores.length > 0 && (

@@ -8,12 +8,21 @@
 
 .lista__suspensa select {
   background-color: #ffffff;
+  color: #797979;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
   border: none;
   font-size: 16px;
   padding: 1em;
   box-sizing: border-box;
+}
+
+.lista__suspensa select input {
+  color: #000000;
+}
+
+.lista__suspensa select option[data-default] {
+  color: black
 }
 
 @media screen and (max-width: 720px) {
