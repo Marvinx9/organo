@@ -1,8 +1,13 @@
 import "./Colaborador.css";
 
-const Colaborador = ({ nome, imagem, cargo }) => {
+const Colaborador = ({ nome, imagem, cargo, corPrimaria }) => {
   return (
-    <div className="colaborador">
+    <div
+      className="colaborador"
+      style={{
+        background: `linear-gradient(to bottom, ${corPrimaria} 50%, #ffffff 50%)`,
+      }}
+    >
       <div className="cabecalho">
         <img src={imagem} alt={nome} />
       </div>

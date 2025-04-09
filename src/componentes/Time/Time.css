@@ -4,6 +4,7 @@
 }
 
 .time h3 {
+  font-family: "Prata", serif;
   font-size: 32px;
   font-weight: 400;
   border-bottom: 4px solid;
@@ -16,4 +17,24 @@
   justify-content: space-around;
   margin-top: 2em;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 720px) {
+  .time .colaboradores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .time .colaboradores {
+    justify-content: center;
+  }
+  .time h3 {
+    font-size: 24px;
+  }
 }

@@ -13,5 +13,27 @@
 
 .formulario > form > h2 {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 200;
+  font-family: "Prata", serif;
+}
+
+@media screen and (max-width: 720px) {
+  .formulario form h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .formulario {
+    margin: 2em 2em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .formulario {
+    margin: 1em 1em;
+  }
+
+  .formulario form h2 {
+    font-size: 25px;
+  }
 }
