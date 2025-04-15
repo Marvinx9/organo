@@ -49,6 +49,13 @@
   color: #212121;
 }
 
+.deletar {
+  /* position: relative; */
+  right: -2em;
+  top: -2em;
+  color: black;
+}
+
 @media screen and (max-width: 720px) {
   .colaborador {
     width: 20em;
