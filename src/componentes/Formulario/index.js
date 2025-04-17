@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import Botao from "../Botao";
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
@@ -9,11 +10,14 @@ const Formulario = (props) => {
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
+  const [nomeTime, setNomeTime] = useState("");
+  const [corTime, setCorTime] = useState("");
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
 
     props.aoColaboradorCadastrado({
+      id: uuidv4(),
       nome,
       cargo,
       imagem,
@@ -57,6 +61,26 @@ const Formulario = (props) => {
           itens={props.times}
         />
         <Botao>Criar Card</Botao>
+      </form>
+      <form onSubmit={(evento) => {
+        evento.preventDefault()
+        props.cadastrarTime({nome: nomeTime, cor: corTime})}}>
+        <h2>Preencha os dados para criar um novo time.</h2>
+        <CampoTexto
+          obrigatorio={true}
+          label="Nome do Time"
+          valor={nomeTime}
+          aoAlterar={(valor) => setNomeTime(valor)}
+          placeholder="Digite o nome do time"
+        />
+        <CampoTexto
+          obrigatorio={true}
+          label="Cor do Time"
+          valor={corTime}
+          aoAlterar={(valor) => setCorTime(valor)}
+          placeholder="Digite a cor do time"
+        />
+        <Botao>Criar Time</Botao>
       </form>
     </section>
   );

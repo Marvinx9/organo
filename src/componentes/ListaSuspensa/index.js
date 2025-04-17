@@ -1,6 +1,7 @@
 import "./ListaSuspensa.css";
 
 const ListaSuspensa = (props) => {
+  
   return (
     <div className="lista__suspensa">
       <label>{props.label}</label>
@@ -11,7 +12,7 @@ const ListaSuspensa = (props) => {
         required={props.required}
       >
         <option value="" disabled hidden data-default>
-          <p>Selecione um item...</p>
+          Selecione um item...
         </option>
         {props.itens.map((item) => (
           (<option style={{color: '#000'}} key={item} >{item}</option>)
