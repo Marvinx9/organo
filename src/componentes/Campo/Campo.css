@@ -1,8 +1,8 @@
-.campo__texto {
+.campo {
   margin: 1.5em 0;
 }
 
-.campo__texto label {
+.campo label {
   display: block;
   margin-bottom: 0.2em;
   font-family: "Montserrat", sans-serif;
@@ -10,7 +10,7 @@
   font-weight: 500;
 }
 
-.campo__texto input {
+.campo input {
   background-color: #ffffff;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
@@ -20,18 +20,23 @@
   box-sizing: border-box;
 }
 
+.campo-color input {
+  padding: 0em 2em;
+  height: 2em;
+}
+
 @media screen and (max-width: 720px) {
-  .campo__texto label {
+  .campo label {
     font-size: 14px;
   }
 
-  .campo__texto input {
+  .campo input {
     padding: 0.8em;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .campo__texto input {
+  .campo input {
     padding: 1em;
   }
 }
