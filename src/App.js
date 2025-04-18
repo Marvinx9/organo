@@ -18,6 +18,7 @@ function App() {
   const colaborador = [
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Afrânio Dantas',
       imagem: 'https://github.com/Marvinx9.png',
       cargo: 'dev Júnior',
@@ -25,6 +26,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Breno Alves',
       imagem: 'https://github.com/BrenoRev.png',
       cargo: 'dev Júnior',
@@ -32,6 +34,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Evanildo Silva',
       imagem: 'https://github.com/evanildo-silva.png',
       cargo: 'dev Júnior',
@@ -39,6 +42,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Evanildo Silva',
       imagem: 'https://github.com/evanildo-silva.png',
       cargo: 'dev Júnior',
@@ -46,6 +50,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Evanildo Silva',
       imagem: 'https://github.com/evanildo-silva.png',
       cargo: 'dev Júnior',
@@ -53,6 +58,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Evanildo Silva',
       imagem: 'https://github.com/evanildo-silva.png',
       cargo: 'dev Júnior',
@@ -60,6 +66,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Afrânio Dantas',
       imagem: 'https://github.com/Marvinx9.png',
       cargo: 'dev Júnior',
@@ -67,6 +74,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome: 'Breno Alves',
       imagem: 'https://github.com/BrenoRev.png',
       cargo: 'dev Júnior',
@@ -98,9 +106,16 @@ function App() {
   }
 
   function cadastrarTime(novoTime) {
-    setTimes([...times, {...novoTime, id: uuidv4()}])
-    console.log(times);
+    setTimes([...times, {...novoTime, id: uuidv4()}
+    ])
     
+  }
+
+  function resolverFavorito(id) {
+    setColaboradores(colaboradores.map(colaborador => {
+      if(colaborador.id === id) colaborador.favorito = !colaborador.favorito;
+      return colaborador
+    }))
   }
 
   return (
@@ -115,6 +130,7 @@ function App() {
       />
       {times.map((time) => (
         <Time
+          aoFavoritar={resolverFavorito}
           nome={time.nome}
           id={time.id}
           key={time.id}

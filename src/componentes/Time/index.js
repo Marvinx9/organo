@@ -28,6 +28,8 @@ const Time = (props) => {
                 cargo={colaborador.cargo}
                 corPrimaria={props.cor}
                 aoDeletar={props.aoDeletar}
+                favorito={colaborador.favorito}
+                aoFavoritar={props.aoFavoritar}
               />
             );
           })}
