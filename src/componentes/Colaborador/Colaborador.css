@@ -56,6 +56,9 @@
   cursor: pointer;
 }
 
+.favoritar {
+  margin-top: 1em;
+}
 @media screen and (max-width: 720px) {
   .colaborador {
     width: 20em;
