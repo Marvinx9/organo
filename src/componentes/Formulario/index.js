@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import Botao from "../Botao";
-import CampoTexto from "../CampoTexto";
+import Campo from "../Campo";
 import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
@@ -33,21 +33,21 @@ const Formulario = (props) => {
     <section className="formulario">
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do desenvolvedor.</h2>
-        <CampoTexto
+        <Campo
           obrigatorio={true}
           label="Nome"
           valor={nome}
           aoAlterar={(valor) => setNome(valor)}
           placeholder="Digite seu nome"
         />
-        <CampoTexto
+        <Campo
           obrigatorio={true}
           label="Cargo"
           valor={cargo}
           aoAlterar={(valor) => setCargo(valor)}
           placeholder="Digite seu cargo"
         />
-        <CampoTexto
+        <Campo
           valor={imagem}
           aoAlterar={(valor) => setImagem(valor)}
           label="Imagem"
@@ -66,19 +66,20 @@ const Formulario = (props) => {
         evento.preventDefault()
         props.cadastrarTime({nome: nomeTime, cor: corTime})}}>
         <h2>Preencha os dados para criar um novo time.</h2>
-        <CampoTexto
+        <Campo
           obrigatorio={true}
           label="Nome do Time"
           valor={nomeTime}
           aoAlterar={(valor) => setNomeTime(valor)}
           placeholder="Digite o nome do time"
         />
-        <CampoTexto
+        <Campo
           obrigatorio={true}
           label="Cor do Time"
           valor={corTime}
           aoAlterar={(valor) => setCorTime(valor)}
           placeholder="Digite a cor do time"
+          type='color'
         />
         <Botao>Criar Time</Botao>
       </form>
